@@ -20,11 +20,10 @@ Three web accounts, about 30 minutes. Do them in this order.
    REDIS_URL=${{Redis.REDIS_URL}}
    ANTHROPIC_API_KEY=sk-ant-...        (from console.anthropic.com → API keys)
    NODE_ENV=production
-   PORT=4000
    ```
    Match `Postgres` / `Postgres-2` to whatever Railway named your two databases.
 5. **Settings → Networking → Generate Domain**. Copy the URL, e.g. `relaax-api-production.up.railway.app`. Open `https://<that url>/health` in a browser: `{"ok":true}` means it is live.
-6. One-time seed: in the service's **Settings → Deploy**, temporarily set the start command to `pnpm db:seed && pnpm --filter @relaax/db migrate && node apps/api/dist/server.js`, redeploy once, then remove `pnpm db:seed &&`.
+6. Nothing else: every deploy runs the database migrations and the (idempotent) seed before the API starts.
 
 Optional later: `GOOGLE_PLACES_API_KEY` (Eat Out), `CLERK_SECRET_KEY` (real sign-in), `STRIPE_SECRET_KEY`.
 
