@@ -1,5 +1,5 @@
 {
-  "id": "c2a39b99-03e5-4e31-8927-97f422dda735",
+  "id": "88528914-d39b-4624-913b-9d570fa6e10b",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -1360,9 +1360,15 @@
           "primaryKey": false,
           "notNull": true
         },
-        "location": {
-          "name": "location",
-          "type": "geometry(point)",
+        "lat": {
+          "name": "lat",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "lng": {
+          "name": "lng",
+          "type": "double precision",
           "primaryKey": false,
           "notNull": false
         },

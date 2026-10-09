@@ -1,4 +1,4 @@
-import { pgTable, uuid, text, timestamp, integer, jsonb, pgEnum, geometry } from "drizzle-orm/pg-core";
+import { pgTable, uuid, text, timestamp, integer, jsonb, pgEnum, doublePrecision } from "drizzle-orm/pg-core";
 import { users } from "./identity";
 
 // Phase 3 tables, stubbed in Phase 1 so ids are stable.
@@ -32,7 +32,8 @@ export const camps = pgTable("camps", {
   id: uuid("id").primaryKey().defaultRandom(),
   operatorUserId: uuid("operator_user_id").notNull().references(() => users.id),
   name: text("name").notNull(),
-  location: geometry("location", { type: "point", mode: "xy", srid: 4326 }),
+  lat: doublePrecision("lat"),
+  lng: doublePrecision("lng"),
   startsAt: timestamp("starts_at").notNull(),
   endsAt: timestamp("ends_at").notNull(),
   capacity: integer("capacity").notNull(),
