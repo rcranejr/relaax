@@ -5,7 +5,7 @@
     "preview": {
       "distribution": "internal",
       "channel": "preview",
-      "env": { "EXPO_PUBLIC_API_URL": "https://REPLACE-WITH-RAILWAY-URL.up.railway.app" }
+      "env": { "EXPO_PUBLIC_API_URL": "https://relaaxapi-production.up.railway.app" }
     },
     "production": { "channel": "production", "autoIncrement": true }
   },

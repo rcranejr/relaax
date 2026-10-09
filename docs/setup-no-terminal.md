@@ -30,7 +30,7 @@ Optional later: `GOOGLE_PLACES_API_KEY` (Eat Out), `CLERK_SECRET_KEY` (real sign
 ## 3. Expo EAS (builds the phone app)
 
 1. Sign up at expo.dev with GitHub. **Create a project** named `relaax`; copy its **Project ID**.
-2. In GitHub, open `apps/mobile/app.config.ts` and click the pencil icon. Replace `projectId: ""` with your id. In `apps/mobile/eas.json` replace `REPLACE-WITH-RAILWAY-URL...` with the Railway domain from step 2.5. Commit both.
+2. In GitHub, open `apps/mobile/app.config.ts` and click the pencil icon. Replace `projectId: ""` with your id. (`apps/mobile/eas.json` already points at the Railway domain.) Commit.
 3. On expo.dev → project → **GitHub** tab, connect the `relaax` repo. The workflow in `.eas/workflows/preview.yml` builds iOS and Android previews on every push to `main`.
 4. When the build finishes (10 to 20 minutes), EAS emails an install link. On iPhone it installs as an internal build; Expo walks you through registering your phone the first time (needs an Apple Developer account, $99/yr). On Android the link installs directly.
 
