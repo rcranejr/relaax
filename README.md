@@ -13,7 +13,11 @@ Training, fuel, and recruiting for youth lacrosse athletes (8-18), with a parent
 | `packages/db` | Drizzle schemas: `core` and the isolated `health` vault (separate database). Seed with 14 drills and 5 badges. |
 | `packages/ai` | LLM gateway (per-task model routing, forced tool use, call logging), versioned prompts, PII scrubber. |
 
-## Run it
+## No terminal? Start here
+
+[docs/setup-no-terminal.md](docs/setup-no-terminal.md): GitHub + Railway + Expo EAS, all in the browser.
+
+## Run it locally
 
 ```bash
 pnpm install

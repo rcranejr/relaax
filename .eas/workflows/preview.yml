@@ -1,0 +1,12 @@
+# Builds a preview app for iOS and Android on every push to main. Install from the link EAS emails you.
+name: Preview build
+on:
+  push:
+    branches: [main]
+jobs:
+  build_ios:
+    type: build
+    params: { platform: ios, profile: preview }
+  build_android:
+    type: build
+    params: { platform: android, profile: preview }
