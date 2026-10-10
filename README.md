@@ -15,7 +15,8 @@ Training, fuel, and recruiting for youth lacrosse athletes (8-18), with a parent
 
 ## No terminal? Start here
 
-[docs/setup-no-terminal.md](docs/setup-no-terminal.md): GitHub + Railway + Expo EAS, all in the browser.
+- **Replit (easiest):** [docs/setup-replit.md](docs/setup-replit.md) — import the repo, add a database, press Run. API, databases and a web preview of the app in one place.
+- Railway + Expo EAS: [docs/setup-no-terminal.md](docs/setup-no-terminal.md).
 
 ## Run it locally
 

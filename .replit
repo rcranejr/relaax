@@ -1,0 +1,36 @@
+run = "bash scripts/replit-start.sh"
+entrypoint = "README.md"
+modules = ["nodejs-22", "postgresql-16"]
+
+[nix]
+channel = "stable-24_05"
+
+# Expo web preview (opens in the Replit preview pane)
+[[ports]]
+localPort = 8081
+externalPort = 80
+
+# API (reachable at https://<your-repl-domain>:3000)
+[[ports]]
+localPort = 4000
+externalPort = 3000
+
+[env]
+EXPO_NO_TELEMETRY = "1"
+CI = "1"
+
+[deployment]
+run = ["bash", "scripts/replit-start.sh"]
+deploymentTarget = "vm"
+
+[workflows]
+runButton = "Start ReLaax"
+
+[[workflows.workflow]]
+name = "Start ReLaax"
+mode = "sequential"
+author = "relaax"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "bash scripts/replit-start.sh"
